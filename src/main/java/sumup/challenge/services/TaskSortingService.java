@@ -8,7 +8,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
-public class JobSortingService {
+public class TaskSortingService {
     public List<Task> sortTasks(List<Task> tasks) throws InvalidTaskException {
         List<Task> sortedTasks = new ArrayList<>();
         Set<String> visited = new HashSet<>();

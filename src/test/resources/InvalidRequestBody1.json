@@ -1,0 +1,12 @@
+{
+  "tasks": [
+    {
+      "command": "touch file1",
+      "requires": ["task-2"]
+    },
+    {
+      "name": "task-2",
+      "command": "echo 'Hello World!'"
+    }
+  ]
+}

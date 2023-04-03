@@ -12,7 +12,7 @@ public class InvalidTaskResponse implements ErrorResponse {
 
     @Override
     public HttpStatusCode getStatusCode() {
-        return HttpStatus.INTERNAL_SERVER_ERROR;
+        return HttpStatus.BAD_REQUEST;
     }
 
     @Override

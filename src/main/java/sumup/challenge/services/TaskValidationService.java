@@ -5,7 +5,7 @@ import sumup.challenge.data.Job;
 import sumup.challenge.exceptions.InvalidTaskException;
 
 @Service
-public class JobValidationService {
+public class TaskValidationService {
     public void validateJob(Job job) throws InvalidTaskException {
         job.getTasks().forEach(task -> {
             if (task.getName() == null || task.getCommand() == null) {
@@ -15,7 +15,7 @@ public class JobValidationService {
                 task.getDependencies().forEach(dependency -> {
                     if (job.getTasks().stream().noneMatch(t -> t.getName().equals(dependency))) {
                         throw new InvalidTaskException(
-                                "Invalid task dependency. " + task.getName() + " depends on non-existing requirement " + dependency + " .");
+                                "Invalid task dependency. " + task.getName() + " depends on non-existing requirement " + dependency + ".");
                     }
                 });
             }
