@@ -15,9 +15,9 @@ public class TaskExecutionService {
         Process process = buildTasks(tasks).start();
         int exitCode = process.waitFor();
         if (exitCode == 0) {
-            System.out.println("Process completed successfully.");
+            System.out.println("Process completed successfully."); // can be logs
         } else {
-            System.out.println("Process exited with error code " + exitCode);
+            System.out.println("Process exited with error code " + exitCode); // can be logs
         }
         process.destroy();
     }
